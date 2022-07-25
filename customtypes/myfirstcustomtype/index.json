@@ -1,0 +1,50 @@
+{
+  "id": "myfirstcustomtype",
+  "label": "MyFirstCustomType",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        }
+      },
+      "Title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
+      "ImageOfCard": {
+        "type": "Image",
+        "config": {
+          "label": "Image Of Card",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "LikeButton": {
+        "type": "Text",
+        "config": {
+          "label": "Like Button",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

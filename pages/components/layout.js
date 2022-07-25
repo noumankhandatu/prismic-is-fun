@@ -49,7 +49,9 @@ export default function Layout({ children }) {
           </a>
         </Link>
       </div>
+      {/* header */}
       {children}
+      {/* footer */}
       <div className="bg-black text-white text-xl py-10 px-24 flex flex-col">
         <div>
           <Link href="/">
