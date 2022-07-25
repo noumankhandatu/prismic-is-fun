@@ -1,8 +1,13 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Layout from "./components/layout";
+import Prismic from "prismic-javascript";
+import { RichText } from "prismic-reactjs";
+import Link from "next/link";
+import { Client } from "../prismic-configuration";
 
-export default function Home() {
+export default function Home({ articles, trending, myfirstcustomtype }) {
+  console.log(myfirstcustomtype, "my data");
   return (
     <div className={styles.container}>
       <Head>
@@ -15,7 +20,79 @@ export default function Home() {
           src="https://static.cdn.prismic.io/prismic.js?new=true&repo=testingcodehere"
         ></script>
       </Head>
-      <Layout>Hello Im layout</Layout>
+      <Layout>
+        <div className="text-2xl font-bold my-10 ml-24">
+          See whats Happening around the world
+          {articles.results.map((items) => {
+            return (
+              <div>
+                <p> {RichText.render(items.data.uid)}</p>
+                <div className="text-3xl bold text-blue-600 cursor-pointer">
+                  {RichText.render(items.data.Title)}
+                </div>
+                <img width={"20%"} src={items.data.imageofArticle.url} alt="" />
+                <div className="text-[16px] bold text-red-600 cursor-pointer">
+                  <RichText render={items.data.description} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <hr />
+        <div className="flex">
+          <div className="flex flex-col w-2/3 ml-24 mr-20">
+            {myfirstcustomtype?.results?.map((items) => {
+              return (
+                <div>
+                  <RichText render={items.data.Title} />
+                  <img width={"20%"} src={items.data.ImageOfCard.url} alt="" />
+                  <RichText render={items.data.description} />
+                  <RichText render={items.data.LikeButton} />
+                </div>
+              );
+            })}
+          </div>
+          <div className="flex flex-col w-1/3 mr-20">
+            {trending?.results?.map((items) => {
+              return (
+                <div>
+                  <div>
+                    <RichText render={items.data.uid} />
+                  </div>
+                  <div>
+                    <RichText render={items.data.info} />
+                  </div>
+                  <div>
+                    <RichText render={items.data.headline} />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </Layout>
     </div>
   );
+}
+
+// this function is called everytime a request/refresh is made
+
+export async function getServerSideProps() {
+  const articles = await Client().query(
+    Prismic.Predicates.at("document.type", "article")
+  );
+  const trending = await Client().query(
+    Prismic.Predicates.at("document.type", "trending")
+  );
+  const myfirstcustomtype = await Client().query(
+    Prismic.Predicates.at("document.type", "myfirstcustomtype")
+  );
+
+  return {
+    props: {
+      articles,
+      myfirstcustomtype,
+      trending,
+    },
+  };
 }

@@ -1,0 +1,9 @@
+import MyComponent from '../../../../slices/SectionOfWebsite';
+
+export default {
+  title: 'slices/SectionOfWebsite'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"section_of_website","items":[],"primary":{"title":[{"type":"heading1","text":"Embrace cross-platform ROI","spans":[]}],"description":[{"type":"paragraph","text":"Enim do id laborum id nisi nisi mollit ea duis nulla veniam esse adipisicing. Dolore do nostrud incididunt non. Eu amet eu cupidatat commodo cupidatat ex incididunt esse.","spans":[]}]},"id":"_Default"}} />
+_Default.storyName = 'Default'

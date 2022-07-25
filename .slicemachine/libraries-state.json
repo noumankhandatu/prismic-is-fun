@@ -1,5 +1,82 @@
 {
   "slices": {
-    "components": {}
+    "components": {
+      "section_of_website": {
+        "library": "slices",
+        "id": "section_of_website",
+        "name": "SectionOfWebsite",
+        "description": "SectionOfWebsite",
+        "model": {
+          "id": "section_of_website",
+          "type": "SharedSlice",
+          "name": "SectionOfWebsite",
+          "description": "SectionOfWebsite",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SectionOfWebsite",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "section_of_website",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Embrace cross-platform ROI",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Enim do id laborum id nisi nisi mollit ea duis nulla veniam esse adipisicing. Dolore do nostrud incididunt non. Eu amet eu cupidatat commodo cupidatat ex incididunt esse.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/media/xin/HardDrive/Marathon/Prismic-Websites/prismic-is-fun/.slicemachine/assets/slices/SectionOfWebsite/default/preview.png",
+            "width": 800,
+            "height": 96
+          }
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "id": "715c7c6a-bdce-4e5f-bd5b-c369b73e1d36",
+  "uid": "quam-non-quae",
+  "type": "article",
+  "data": {
+    "Title": [
+      {
+        "type": "heading1",
+        "text": "Seize collaborative web services",
+        "spans": []
+      }
+    ],
+    "date": "2017-06-20",
+    "imageofArticle": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
+    },
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Occaecat aute cupidatat sit magna ad. Adipisicing labore non elit occaecat eu.",
+        "spans": []
+      }
+    ]
+  }
+}
